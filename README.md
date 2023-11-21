@@ -26,6 +26,7 @@ To run the application:
 - Enter a question or command related to the image.
 - View the AI-generated captions and detected objects.
 
+![Screenshot from 2023-11-13 15-54-22](https://github.com/KhalidNazzar/Interactive-Image-Analysis-Tool/assets/75658324/8f6f7c7b-5502-4970-8fb7-a3dcf02d7078)
 
 ## Dependencies
 - Streamlit
