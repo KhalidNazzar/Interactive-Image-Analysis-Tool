@@ -1,4 +1,3 @@
-    # openai_api_key="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",
 from tempfile import NamedTemporaryFile
 import streamlit as st
 from langchain.agents import initialize_agent
@@ -17,7 +16,7 @@ conversational_memory = ConversationBufferWindowMemory(
 )
 
 llm = ChatOpenAI(
-    openai_api_key="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",
+    openai_api_key="#ApiKeyOfYours",
     temperature=0.5,
     model_name="gpt-3.5-turbo"
 )
@@ -44,12 +43,6 @@ if file:
         with NamedTemporaryFile(dir='.') as f:
             f.write(file.getbuffer())
             image_path = f.name
-
-            # Resize image if needed (optional)
-            # image = Image.open(image_path)
-            # image = image.resize((desired_width, desired_height))
-            # image.save(image_path)
-
             with st.spinner(text='In progress...'):
                 response = agent.run(f'{user_question}, this is the image path: {image_path}')
                 st.write(response)
