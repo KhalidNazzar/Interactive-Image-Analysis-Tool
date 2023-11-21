@@ -6,7 +6,6 @@ from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 from tools_1 import ImageCaptionTool, ObjectDetectionTool
 from PIL import Image
 
-# Initialize tools only once
 tools = [ImageCaptionTool(), ObjectDetectionTool()]
 
 conversational_memory = ConversationBufferWindowMemory(
